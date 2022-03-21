@@ -26,7 +26,6 @@ def sample_file_upload():
                                     <input type="file" class="form-control-file" id="photo" name="file">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Отправить</button>
-
                             <img src="{url_for('static', filename='img/map.png')}">
                             </form>
                           </body>
@@ -58,7 +57,6 @@ def sample_file_upload():
                                     <input type="file" class="form-control-file" id="photo" name="file">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Отправить</button>
-
                             <img src="{url_for('static', filename='img/map.png')}">
                             </form>
                           </body>
