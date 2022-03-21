@@ -3,9 +3,6 @@ from flask import Flask, url_for, request
 app = Flask(__name__)
 
 
-#  http://127.0.0.1:8080/results/Егор/3/3.4
-
-
 @app.route('/load_photo', methods=['POST', 'GET'])
 def sample_file_upload():
     if request.method == 'GET':
@@ -30,16 +27,16 @@ def sample_file_upload():
                                 </div>
                                 <button type="submit" class="btn btn-primary">Отправить</button>
 
-                            <img src="{url_for('static', filename='img/map.png')}"alt="здесь мгола быть ваша реклама">
+                            <img src="{url_for('static', filename='img/map.png')}">
                             </form>
                           </body>
                         </html>'''
     elif request.method == 'POST':
         f = request.files['file']
-        fff = f.read()
-        map_file = "static/map.png"
-        with open(map_file, "wb") as file:
-            file.write(fff)
+        ff = f.read()
+        mars_file = "static/map.png"
+        with open(mars_file, "wb") as file:
+            file.write(ff)
             file.close()
         return f'''<!doctype html>
                         <html lang="en">
@@ -61,7 +58,8 @@ def sample_file_upload():
                                     <input type="file" class="form-control-file" id="photo" name="file">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Отправить</button>
-                            <img src="{url_for('static', filename='map.png')}">
+
+                            <img src="{url_for('static', filename='img/map.png')}">
                             </form>
                           </body>
                         </html>'''
